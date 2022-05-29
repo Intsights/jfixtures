@@ -96,8 +96,6 @@ function getParams(fn: Fn): string[] {
 function inject(fn: Fn, scopeFixtures: Map<string, any>): Fn {
   const fixtures = getParams(fn);
 
-  // console.log(`Function ${fn.name || '<annonymous>'} requires [${fixtures.join(', ')}]`);
-
   const realFixtures: any[] = [];
   for (const fixture of fixtures) {
     const existingFixture = scopeFixtures.get(fixture);
