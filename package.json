@@ -1,5 +1,5 @@
 {
-  "name": "jest-fixtures",
+  "name": "@intsights/jest-fixtures",
   "version": "1.0.0",
   "description": "Intsights Jest Fixtures Library",
   "main": "build/index.js",
