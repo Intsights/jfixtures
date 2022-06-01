@@ -17,9 +17,6 @@
     "type": "git",
     "url": "git://github.com/Intsights/jest-fixtures.git"
   },
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
-  },
   "devDependencies": {
     "@types/acorn": "^4.0.5",
     "@types/jest": "^27.0.1",
