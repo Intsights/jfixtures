@@ -4,7 +4,7 @@ This module allows you to inject dependencies to methods, by argument name.
 
 Simple example:
 ``` typescript
-import as jestFixtures from 'jfixtures'
+import * as jestFixtures from 'jfixtures'
 
 class Fixtures {
     @jestFixtures.fixture
@@ -20,7 +20,7 @@ jestFixtures.test('When called => return ok', async (dateMock: Date) => {
 
 Fixtures could use other fixtures!
 ``` typescript
-import as jestFixtures from 'jfixtures'
+import * as jestFixtures from 'jfixtures'
 
 import * as mongodb from 'mongodb';
 
