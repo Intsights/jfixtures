@@ -1,3 +1,5 @@
 coverage/
 src/
 tsconfig.json
+jest.config.ts
+.eslintrc.json
