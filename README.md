@@ -1,4 +1,4 @@
-# jest-fixtures
+# jfixtures
 
 This module allows you to inject dependencies to methods, by argument name.
 

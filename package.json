@@ -15,7 +15,7 @@
   "private": false,
   "repository": {
     "type": "git",
-    "url": "git://github.com/Intsights/jest-fixtures.git"
+    "url": "git://github.com/Intsights/jfixtures.git"
   },
   "devDependencies": {
     "@types/acorn": "^4.0.5",
@@ -33,9 +33,9 @@
     "typescript": "^4.3.2"
   },
   "bugs": {
-    "url": "https://github.com/Intsights/jest-fixtures/issues"
+    "url": "https://github.com/Intsights/jfixtures/issues"
   },
-  "homepage": "https://github.com/Intsights/jest-fixtures",
+  "homepage": "https://github.com/Intsights/jixtures",
   "author": "gil_rom@rapid7.com",
   "license": "MIT"
 }
