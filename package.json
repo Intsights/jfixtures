@@ -35,7 +35,7 @@
   "bugs": {
     "url": "https://github.com/Intsights/jfixtures/issues"
   },
-  "homepage": "https://github.com/Intsights/jixtures",
+  "homepage": "https://github.com/Intsights/jfixtures",
   "author": "gil_rom@rapid7.com",
   "license": "MIT"
 }
