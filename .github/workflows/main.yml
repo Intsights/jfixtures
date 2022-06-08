@@ -1,0 +1,33 @@
+# This is a basic workflow to help you get started with Actions
+
+name: CI
+
+on:
+  workflow_dispatch:
+    inputs:
+      deploy:
+        description: 'Should deploy (n/y)'
+        default: 'n'
+        required: false
+  pull_request:
+    paths:
+      - '**'
+  push:
+    branches:
+      - master
+      - dev
+    paths:
+      - '**'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v3
+      - uses: ./.github/actions/setup-node
+      - run: npm install
+      - run: npm run lint
+      - run: npm run test
+      - run: npm run build
