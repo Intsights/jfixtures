@@ -1,0 +1,36 @@
+name: 'Setup node environment'
+description: Install correct version of node and download cache
+inputs:
+  node-version:
+    required: false
+    description: node version
+    default: '16'
+  npm-global-package:
+    required: false
+    description: another optional global pagakag to install
+  cache-key:
+    required: false
+    description: cache key
+  cache-path:
+    required: false
+    description: cache path
+outputs:
+  cache-hit:
+    description: cache-hit outputs from actions/cache
+    value: ${{ steps.cache.outputs.cache-hit }}
+runs:
+  using: "composite"
+  steps:
+    - uses: actions/setup-node@v2
+      with:
+        node-version: ${{ inputs.node-version }}
+    - name: install global package
+      if: ${{ inputs.npm-global-package }}
+      shell: bash
+      run: npm i -g ${{ inputs.npm-global-package }}
+    - uses: ./.github/actions/setup-cache
+      if: ${{ inputs.cache-key }}
+      id: cache
+      with:
+        cache-path: ${{ inputs.cache-path }}
+        cache-key: ${{ inputs.cache-key }}

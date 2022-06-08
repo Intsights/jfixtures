@@ -1,0 +1,22 @@
+name: 'Use cache'
+description: Use github cache
+inputs:
+  cache-key:
+    required: false
+    description: cache key
+  cache-path:
+    required: false
+    description: cache path
+outputs:
+  cache-hit:
+    description: cache-hit outputs from actions/cache
+    value: ${{ steps.cache.outputs.cache-hit }}
+runs:
+  using: "composite"
+  steps:
+    - uses: actions/cache@v3
+      if: ${{ inputs.cache-key && inputs.cache-path }}
+      id: cache
+      with:
+        path: ${{ inputs.cache-path }}
+        key: ${{ hashFiles(inputs.cache-key) }}
