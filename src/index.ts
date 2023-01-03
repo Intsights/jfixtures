@@ -67,7 +67,7 @@ function register(fixture: Fn): void {
 function getParams(fn: Fn): string[] {
   let parsed: any;
   try {
-    parsed = acorn.parse(fn.toString());
+    parsed = acorn.parse(fn.toString(), { ecmaVersion: 2021 });
 
     return parsed.body[0].params.map((node: any) => node.name);
   } catch (error) {
@@ -75,14 +75,14 @@ function getParams(fn: Fn): string[] {
   }
 
   try {
-    parsed = acorn.parse(fn.toString());
+    parsed = acorn.parse(fn.toString(), { ecmaVersion: 2021 });
     return parsed.body[0].expression.params.map((node: any) => node.name);
   } catch (error) {
     //
   }
 
   try {
-    parsed = acorn.parse(`class Fixtures { ${fn.toString()} }`);
+    parsed = acorn.parse(`class Fixtures { ${fn.toString()} }`, { ecmaVersion: 2021 });
     return parsed.body[0].body.body[0].value.params.map(
       (node: any) => node.name
     );
