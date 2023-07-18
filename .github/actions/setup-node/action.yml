@@ -4,7 +4,7 @@ inputs:
   node-version:
     required: false
     description: node version
-    default: '16'
+    default: '18.16'
   npm-global-package:
     required: false
     description: another optional global pagakag to install
@@ -21,7 +21,7 @@ outputs:
 runs:
   using: "composite"
   steps:
-    - uses: actions/setup-node@v2
+    - uses: actions/setup-node@v3
       with:
         node-version: ${{ inputs.node-version }}
     - name: install global package
