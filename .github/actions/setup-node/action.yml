@@ -4,7 +4,7 @@ inputs:
   node-version:
     required: false
     description: node version
-    default: '18.16'
+    default: '18'
   npm-global-package:
     required: false
     description: another optional global pagakag to install
