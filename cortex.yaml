@@ -1,0 +1,14 @@
+---
+info:
+  title: Jfixtures
+  x-cortex-git:
+    github:
+      alias: intsightsorg
+      repository: Intsights/jfixtures
+  x-cortex-tag: jfixtures
+  x-cortex-type: service
+  x-cortex-domain-parents:
+  - tag: threatintel-rd
+openapi: 3.0.1
+servers:
+- url: "/"
