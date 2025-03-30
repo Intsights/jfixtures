@@ -1,5 +1,6 @@
 import * as jestFixtures from '..';
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 class Fixtures {
     @jestFixtures.fixture
     dateMock(): Date {

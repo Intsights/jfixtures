@@ -25,13 +25,13 @@
     "ts-jest": "~29.2"
   },
   "devDependencies": {
+    "@types/acorn": "~4.0",
     "@types/jest": "~29.5",
     "@typescript-eslint/eslint-plugin": "~6.21",
     "eslint": "~8.57",
     "eslint-config-prettier": "~9.1",
     "eslint-plugin-import": "~2.31",
     "eslint-plugin-prettier": "~5.1",
-    "jest-junit": "~16.0",
     "prettier": "~3.2",
     "ts-node-dev": "~1.1",
     "typescript": "~5.3"
