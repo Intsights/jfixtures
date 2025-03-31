@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import * as jestGlobals from '@jest/globals';
 import * as acorn from 'acorn';
 
